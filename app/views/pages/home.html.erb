@@ -1,1 +1,26 @@
 <h1>Wellcome</h1>
+<br>
+
+<div class="p-5 card rounded">
+  <h3>Top 3</h3>
+
+  <% @most_viewed.each do |post| %>
+    <p><%= link_to post.title, post, class: "text-success" %></p>
+  <% end %>
+</div>
+
+<div class="p-5 card rounded">
+  <h3>Short Read</h3>
+
+  <% @short_reads.each do |post| %>
+    <p><%= link_to post.title, post, class: "text-primary" %></p>
+  <% end %>
+</div>
+
+<div class="p-5 card rounded">
+  <h3>Specific Posts</h3>
+
+  <% @specific_posts.each do |post| %>
+    <p><%= link_to post.title, post, class: "text-danger" %></p>
+  <% end %>
+</div>
